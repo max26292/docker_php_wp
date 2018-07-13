@@ -1,3 +1,6 @@
+FROM httpd:2.4
+# COPY ./my-httpd.conf /usr/local/apache2/conf/httpd.conf
+############ END APACHE INSTALL #########
 FROM php:7.1.19-apache
 #install extension for php 
 # required extension

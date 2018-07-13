@@ -25,8 +25,8 @@ services:
       #root dir
       - ./:/var/www/html/:rw
       #config dir
-      - ./etc/apache2/apache2.conf:/etc/apache2/conf-enabled/apache2.conf
-      - ./etc/apache2/hosts.conf:/etc/apache2/sites-enabled/hosts.conf
+      - ./etc/apache2/apache2.conf:/usr/local/apache2/conf/httpd.conf
+      # - ./etc/apache2/hosts.conf:/etc/apache2/sites-enabled/hosts.conf
     ports:
       - "81:80"
     depends_on:
@@ -48,8 +48,16 @@ services:
       - "8080:80"
     networks: 
       - local-net
+# #compose for laravel
+#   composer:
+#     image: composer/composer:php7
+#     command: install
+#     volumes: 
+#       - ./app:/app
 networks:
   local-net:
+    
     driver: bridge
+    
 volumes:
   .mysql-data:
