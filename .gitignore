@@ -1,0 +1,7 @@
+sites/*
+npm-debug.log
+.data/*
+.mysql-data/*
+src/*
+docker/*
+docker-php7-httpd-apache2-mysql-master/*
