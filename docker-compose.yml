@@ -55,8 +55,7 @@ services:
 #     volumes: 
 #       - ./app:/app
 networks:
-  local-net:
-    
+  local-net:    
     driver: bridge
     
 volumes:
