@@ -40,3 +40,5 @@ RUN apt-get install mysql-server -y
 #start up apache and mysql 
 # CMD ["/bin/bash",'service mysql start']
 # CMD ["bin/bash", "service apache2 start"]
+ENTRYPOINT ["apachectl", "-D FOREGROUND"]
+CMD ["mysql",'-D FOREGROUND']
