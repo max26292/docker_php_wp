@@ -36,7 +36,10 @@ RUN  apt-cache search php7*
 RUN apt-get install apache2 -y
 #install mysql
 RUN apt-get install mysql-server -y
-
+#open required port 
+EXPOSE 80
+EXPOSE 3306
+EXPOSE 443
 #start up apache and mysql 
 # CMD ["/bin/bash",'service mysql start']
 # CMD ["bin/bash", "service apache2 start"]
