@@ -44,4 +44,4 @@ EXPOSE 443
 # CMD ["/bin/bash",'service mysql start']
 # CMD ["bin/bash", "service apache2 start"]
 ENTRYPOINT ["apachectl", "-D FOREGROUND"]
-CMD ["mysql",'-D FOREGROUND']
+CMD ["mysqld"]
